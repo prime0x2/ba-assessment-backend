@@ -35,3 +35,17 @@ Content-Type: application/json
   "email": "john@doe.com",
   "googleId": "1234567890"
 }
+
+
+
+### Create Task
+POST http://localhost:8080/api/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmYzYmRhODQ1Y2Y0ZGQwYTYyNzRjMzIiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6ImpvaG5AZG9lLmNvbSIsImF1dGhUeXBlIjoiZW1haWwiLCJpYXQiOjE3MjcyNzU1NjUsImV4cCI6MTc1ODgxMTU2NX0.8JgirlAhyhcEyvd-TXQRzl-1d2malVyAzfw5sEDL6tg
+
+{
+  "title": "Task 2",
+  "description": "Description 2",
+  "dueDate": "2024-09-29T00:00:00.000Z",
+  "priority": "mediumf"
+}

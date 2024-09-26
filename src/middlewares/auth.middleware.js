@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { ENV } from '../config/env.js';
-import { HttpException } from '../utilities/http.exception.js';
+import { HttpException } from '../utility/http.exception.js';
 
 export const auth = (req, res, next) => {
 	const token = req.header('Authorization')?.replace('Bearer ', '');
@@ -15,6 +15,13 @@ export const auth = (req, res, next) => {
 		req.user = decoded;
 		next();
 	} catch (error) {
+		console.log(
+			'🚀 prime0x2 | auth.middleware.js | toke & error -->\n',
+			error,
+			'\n',
+			req.header('Authorization')
+		);
+
 		next(HttpException.unauthorized('Invalid token'));
 	}
 };

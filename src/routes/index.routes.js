@@ -1,6 +1,7 @@
 import { Router } from 'express';
 
 import userRoutes from './user.routes.js';
+import taskRoutes from './task.routes.js';
 
 const router = Router();
 
@@ -16,5 +17,6 @@ router.get('/', (req, res) => {
 });
 
 router.use('/user', userRoutes);
+router.use('/tasks', taskRoutes);
 
 export default router;
